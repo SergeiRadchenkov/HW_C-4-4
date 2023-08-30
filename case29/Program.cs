@@ -27,9 +27,10 @@ void FillArray(int[] ints)
 void PrintArray(int[] ints)
 {
     Console.Write("[ ");
-    for (int i = 0; i < ints.Length; i++)
-        Console.Write($"{ints}, ");
-
+    for (int i = 0; i < ints.Length - 1; i++)
+        Console.Write($"{ints[i]}, ");
+    Console.Write($"{ints[ints.Length - 1]} ");
+    Console.Write("]");
 }
 
 int size = new Random().Next(1, 9);
