@@ -15,17 +15,26 @@ void FillArray(int[] ints)
         ints[i] = rnd.Next(100);
 }
 
-string PrintArray(int[] ints)
+/* string PrintArray(int[] ints)
 {
     string res = "[ ";
     for (int i = 0; i < ints.Length; i++)
         res += $"{ints[i]} ";
     res += "]";
     return res;
+} */
+
+void PrintArray(int[] ints)
+{
+    Console.Write("[ ");
+    for (int i = 0; i < ints.Length; i++)
+        Console.Write($"{ints}, ");
+
 }
 
 int size = new Random().Next(1, 9);
 int[] myArray = CreateArray(size);
 FillArray(myArray);
-string answer = PrintArray(myArray);
-Console.WriteLine(answer);
+PrintArray(myArray);
+//string answer = PrintArray(myArray);
+//Console.WriteLine(answer);
