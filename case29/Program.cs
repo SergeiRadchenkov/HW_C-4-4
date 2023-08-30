@@ -3,3 +3,29 @@
 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 6, 1, 33 -> [6, 1, 33] */
 
+int[] CreateArray(int size)
+{
+    return new int[size];
+}
+
+void FillArray(int[] ints)
+{
+    Random rnd = new Random();
+    for (int i = 0; i < ints.Length; i++)
+        ints[i] = rnd.Next(100);
+}
+
+string PrintArray(int[] ints)
+{
+    string res = "[ ";
+    for (int i = 0; i < ints.Length; i++)
+        res += $"{ints[i]} ";
+    res += "]";
+    return res;
+}
+
+int size = new Random().Next(1, 9);
+int[] myArray = CreateArray(size);
+FillArray(myArray);
+string answer = PrintArray(myArray);
+Console.WriteLine(answer);
