@@ -12,12 +12,12 @@ int InputNum(string message)
 
 void SumNumbers(int num)
 {
-    int temp = 0;
+    int sum = 0;
     for (int i = 0; i < num; num /= 10)
     {
-        temp = temp + (num % 10);
+        sum = sum + (num % 10);
     }
-    Console.Write(temp);
+    Console.Write(sum);
 }
 
 int number = InputNum("Введите число: ");
